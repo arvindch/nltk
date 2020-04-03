@@ -5,9 +5,10 @@ NLTK is a leading platform for building Python programs to work with human langu
 It provides easy-to-use interfaces to `over 50 corpora and lexical
 resources <http://nltk.org/nltk_data/>`_ such as WordNet,
 along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning,
+wrappers for industrial-strength NLP libraries,
 and an active `discussion forum <http://groups.google.com/group/nltk-users>`_.
 
-Thanks to a hands-on guide introducing programming fundamentals alongside topics in computational linguistics,
+Thanks to a hands-on guide introducing programming fundamentals alongside topics in computational linguistics, plus comprehensive API documentation,
 NLTK is suitable for linguists, engineers, students, educators, researchers, and industry users alike.
 NLTK is available for Windows, Mac OS X, and Linux. Best of all, NLTK is a free, open source, community-driven project.
 
@@ -19,7 +20,7 @@ introduction to programming for language processing.
 Written by the creators of NLTK, it guides the reader through the fundamentals
 of writing Python programs, working with corpora, categorizing text, analyzing linguistic structure,
 and more.
-The book is being updated for Python 3 and NLTK 3.
+The online version of the book has been been updated for Python 3 and NLTK 3.
 (The original Python 2 version is still available at `http://nltk.org/book_1ed <http://nltk.org/book_1ed>`_.)
 
 Some simple things you can do with NLTK

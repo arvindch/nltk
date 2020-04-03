@@ -1,6 +1,6 @@
 # Natural Language Toolkit: Tokenizer Interface
 #
-# Copyright (C) 2001-2014 NLTK Project
+# Copyright (C) 2001-2020 NLTK Project
 # Author: Edward Loper <edloper@gmail.com>
 #         Steven Bird <stevenbird1@gmail.com>
 # URL: <http://nltk.org/>
@@ -10,14 +10,19 @@
 Tokenizer Interface
 """
 
+from abc import ABCMeta, abstractmethod
+
 from nltk.internals import overridden
 from nltk.tokenize.util import string_span_tokenize
 
-class TokenizerI(object):
+
+class TokenizerI(metaclass=ABCMeta):
     """
     A processing interface for tokenizing a string.
     Subclasses must define ``tokenize()`` or ``tokenize_sents()`` (or both).
     """
+
+    @abstractmethod
     def tokenize(self, s):
         """
         Return a tokenized copy of *s*.
@@ -26,8 +31,6 @@ class TokenizerI(object):
         """
         if overridden(self.tokenize_sents):
             return self.tokenize_sents([s])[0]
-        else:
-            raise NotImplementedError()
 
     def span_tokenize(self, s):
         """
@@ -71,8 +74,3 @@ class StringTokenizer(TokenizerI):
     def span_tokenize(self, s):
         for span in string_span_tokenize(s, self._string):
             yield span
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
